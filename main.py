@@ -11,12 +11,12 @@ class Console():
     def ui(self):
         os.system(f'cls && title [ENG] Easy Nitro Generator  ^|  For Help join discord.gg/elimin' if os.name == "nt" else "clear")
         print(center(f"""\n\n
-██████╗ ███╗   ██╗ ██████╗ 
-██╔══██╗████╗  ██║██╔════╝            ~ Easy Nitro Generator ~
-██║  ██║██╔██╗ ██║██║  ███╗     
-██║  ██║██║╚██╗██║██║   ██║     github.com/elimindada ~ skulldev.ga
-██████╔╝██║ ╚████║╚██████╔╝ 
-╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ \n\n
+███████╗███╗   ██╗ ██████╗ 
+██╔════╝████╗  ██║██╔════╝        ~ Easy Nitro Generator ~
+█████╗  ██╔██╗ ██║██║  ███╗
+██╔══╝  ██║╚██╗██║██║   ██║    github.com/elimindada ~ skulldev.ga
+███████╗██║ ╚████║╚██████╔╝
+╚══════╝╚═╝  ╚═══╝ ╚═════╝  /n/n   
               """).replace('█', Fore.CYAN+"█"+Fore.RESET).replace('~', Fore.CYAN+"~"+Fore.RESET).replace('-', Fore.CYAN+"-"+Fore.RESET))
 
     def printer(self, color, status, code):
@@ -89,3 +89,5 @@ if __name__ == "__main__":
     while True:
         if threading.active_count() <= int(Worker().config("thread")):  
             threading.Thread(target=DNG.run(), args=()).start()
+
+
